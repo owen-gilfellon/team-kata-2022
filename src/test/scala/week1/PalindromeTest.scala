@@ -13,6 +13,8 @@ class PalindromeTest extends AnyFunSpec {
             Palindrome.isPalindrome("radar") shouldBe true
             Palindrome.isPalindrome("nurses run") shouldBe true
             Palindrome.isPalindrome("radas") shouldBe false
+            Palindrome.isPalindrome("") shouldBe false
+            Palindrome.isPalindrome("t") shouldBe true
         }
 
         it("should score palindromes") {
@@ -26,6 +28,8 @@ class PalindromeTest extends AnyFunSpec {
             Palindrome.scorePalindrome("odba") shouldBe 50.0
             Palindrome.scorePalindrome("odda") shouldBe 75.0
             Palindrome.scorePalindrome("roxas") shouldBe 60.0
+            Palindrome.scorePalindrome("") shouldBe 0.0
+            Palindrome.scorePalindrome("t") shouldBe 100.0
         }
     }
 }
